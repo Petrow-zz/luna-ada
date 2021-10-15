@@ -23,8 +23,6 @@ function Menu() {
                     <SwiperSlide>Slide 3</SwiperSlide>
                     <SwiperSlide>Slide 4</SwiperSlide>
                 </Swiper>
-
-                <h1>This title edited from a desktop PC</h1>
             </div>
         </div>
     )
