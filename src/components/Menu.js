@@ -24,7 +24,7 @@ function Menu() {
                     <SwiperSlide>Slide 4</SwiperSlide>
                 </Swiper>
 
-                <h1>This title writen on laptop</h1>
+                <h1>This title edited from a desktop PC</h1>
             </div>
         </div>
     )
