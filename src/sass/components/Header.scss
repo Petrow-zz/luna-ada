@@ -1,0 +1,131 @@
+@import '../config/Variables.scss';
+
+.header {
+    background-color: $c-white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    box-shadow: 3px 2px 10px 1px #C4C4C4;
+
+    >.page-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        height: 100%;
+        min-width: 200px;
+        width: 100%;
+    }
+
+    &__lang {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 5px;
+
+        &-link {
+            font-size: 23px;
+            padding: 0px 10px;
+            transition: all 0.3s;
+            cursor: pointer;
+
+            &:first-child {
+                border-right: 1px solid $c-black;
+            }
+            &:last-child {
+                border-left: 1px solid $c-black;
+            }
+
+            &:hover {
+                color: $c-theme;
+                transition: all 0.3s;
+            }
+        }
+    }
+
+    &__logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 5px;
+
+        h1 {
+            font-size: 28px;
+            padding: 15px 5px 0 5px;
+            font-weight: $normal;
+            color: $c-theme;
+        }
+
+        p {
+            font-size: 23px;
+        }
+
+        i {
+            font-size: 64px;
+            color: $c-theme;
+        }
+    }
+
+    &__info {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+        width: 100%;
+
+        &-title {
+            font-size: 18px;
+            text-transform: uppercase;
+            font-family: $oswald;
+            font-weight: $light;
+            letter-spacing: 4px;
+        }
+
+        &-link {
+            color: $c-theme;
+            font-size: 28px;
+            transition: all 0.3s;
+
+                &:hover {
+                    color: $c-black;
+                    transition: all 0.3s;
+                }
+        }
+    }
+}
+
+.nav {
+    padding: 30px 15px;
+    width: 100%;
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+
+        &__item {
+            list-style: none;
+            padding: 5px 0;
+
+            &-link {
+                text-transform: uppercase;
+                font-size: 25px;
+                transition: all 0.3s;
+                font-family: $pirata-one;
+                letter-spacing: 1.2px;
+
+                &:hover {
+                    color: $c-theme;
+                    transition: all 0.3s;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+@import 'variables';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.page-wrapper{
+    min-width: 320px;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.desktop-hide {
+    @media (min-width: 1200px) {
+        display: none;
+    }
+}
+.mobile-hide {
+    @media (max-width: 1199px) {
+        display: none;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $c-black;
+    transition: all 0.3s;
+}
+
+body {
+    font-family: $main-font;
+    padding-left: 250px;
+}
+
+.btn {
+    padding: 10px 30px;
+    background-color: $c-theme;
+    border-radius: 25px;
+    font-size: 25px;
+    letter-spacing: 1.5px;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: transparent;
+        border-color: $c-theme;
+        transition: all 0.3s;
+    }
+}

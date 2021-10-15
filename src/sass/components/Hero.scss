@@ -1,0 +1,77 @@
+@import '../config/Variables.scss';
+
+@keyframes heroContentDownAnimation {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+@keyframes heroContentUpAnimation {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+@keyframes heroContentFadeInAnimation {
+    0% {
+      opacity: 0%;
+    }
+    100% {
+      opacity: 100;
+    }
+}
+
+.hero {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../images/hero_bg.jpg');
+    background-position: center;
+    background-size: cover;
+    color: $c-white;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: $c-black, $alpha: 0.5);
+        z-index: 0;
+    }
+
+    &__wrapper {
+        z-index: 1;
+        max-width: 768px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        font-size: 60px;
+        text-align: center;
+        margin: 15px 0;
+        animation: 2s ease-out 0s 1 heroContentFadeInAnimation;
+    }
+
+    &__text {
+        font-size: 18px;
+        text-align: center;
+        font-family: $noto-sans-mono;
+        font-weight: $light;
+        animation: 2s ease-out 0s 1 heroContentDownAnimation;
+    }
+
+    &__btn {
+        animation: 2s ease-out 0s 1 heroContentUpAnimation;
+    }
+}
